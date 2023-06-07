@@ -1,8 +1,8 @@
 import { CSSProperties } from "styled-components"
-import { GoogleLogo, MyLogo } from "./icons"
+import { GithubLogo, GoogleLogo, MyLogo, SpinningLoader } from "./icons"
 
 type IconType = {
-  name: "logo" | "mute" | "google"
+  name: "logo" | "google" | "github" | "spinning-loader"
   style?: CSSProperties
 }
 
@@ -13,6 +13,12 @@ export default function Icon({ name, style }: IconType) {
 
     case "google":
       return <GoogleLogo />
+
+    case "github":
+      return <GithubLogo />
+
+    case "spinning-loader":
+      return <SpinningLoader />
 
     default:
       return <MyLogo />

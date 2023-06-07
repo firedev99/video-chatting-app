@@ -1,7 +1,7 @@
 import Head from "next/head"
 import { ReactNode } from "react"
 import { Navbar } from "@/components"
-import GradientMeshBg from "../background"
+import GradientMeshBG from "../backgrounds/GradientMeshBG"
 import styled from "styled-components"
 
 type LayoutType = {
@@ -52,7 +52,7 @@ export default function Layout({ children, meta, menu = false }: LayoutType) {
         <link rel="icon" href={icon || "/favicon.ico"} />
       </Head>
       {menu && <Navbar />}
-      <GradientMeshBg />
+      <GradientMeshBG />
       <main>
         <Wrapper>{children}</Wrapper>
       </main>

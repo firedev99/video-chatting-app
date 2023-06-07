@@ -1,9 +1,9 @@
-import { ToastProvider } from "@/lib/contexts/toastContext"
-import { GlobalStyles } from "@/styles/globalStyles"
 import { NextPage } from "next"
 import type { AppProps } from "next/app"
-import { Poppins } from "next/font/google"
 import { ReactElement, ReactNode } from "react"
+import { Poppins } from "next/font/google"
+import { ToastProvider } from "@/lib/contexts/toastContext"
+import { GlobalStyles } from "@/styles/globalStyles"
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode

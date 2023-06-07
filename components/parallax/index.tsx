@@ -1,5 +1,8 @@
-import { useMousePosition } from "@/hooks/useMousePosition"
+import { useRef } from "react"
 import Image from "next/image"
+import { useMousePosition } from "@/hooks/useMousePosition"
+import { useDimensions } from "@/hooks/useDimension"
+import { parallaxImages } from "@/lib/dummy/parallaxImages"
 import {
   ImageElement,
   ObjectContainer,
@@ -7,9 +10,6 @@ import {
   ObjectWrapper,
   ParallaxContainer,
 } from "./styles"
-import { parallaxImages } from "@/lib/dummy/parallaxImages"
-import { useRef } from "react"
-import { useDimensions } from "@/hooks/useDimension"
 
 export default function MouseParallax() {
   const parallaxContainer = useRef<HTMLDivElement | null>(null)
